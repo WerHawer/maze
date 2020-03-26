@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
