@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/maze/static/css/main.7f178138.chunk.css",
+    "main.css": "/maze/static/css/main.0812ad6c.chunk.css",
     "main.js": "/maze/static/js/main.fc15ae6b.chunk.js",
     "main.js.map": "/maze/static/js/main.fc15ae6b.chunk.js.map",
     "runtime-main.js": "/maze/static/js/runtime-main.8b78a93f.js",
@@ -8,9 +8,9 @@
     "static/js/2.222b066a.chunk.js": "/maze/static/js/2.222b066a.chunk.js",
     "static/js/2.222b066a.chunk.js.map": "/maze/static/js/2.222b066a.chunk.js.map",
     "index.html": "/maze/index.html",
-    "precache-manifest.15bf092f7584b4458019de6f0bbb6ae7.js": "/maze/precache-manifest.15bf092f7584b4458019de6f0bbb6ae7.js",
+    "precache-manifest.886e0eb6f70f2db49a4b32e5f4d05a89.js": "/maze/precache-manifest.886e0eb6f70f2db49a4b32e5f4d05a89.js",
     "service-worker.js": "/maze/service-worker.js",
-    "static/css/main.7f178138.chunk.css.map": "/maze/static/css/main.7f178138.chunk.css.map",
+    "static/css/main.0812ad6c.chunk.css.map": "/maze/static/css/main.0812ad6c.chunk.css.map",
     "static/js/2.222b066a.chunk.js.LICENSE.txt": "/maze/static/js/2.222b066a.chunk.js.LICENSE.txt",
     "static/media/index.css": "/maze/static/media/win.8e93251c.png",
     "static/media/SquareEelement.module.css": "/maze/static/media/start.7ff152ba.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.8b78a93f.js",
     "static/js/2.222b066a.chunk.js",
-    "static/css/main.7f178138.chunk.css",
+    "static/css/main.0812ad6c.chunk.css",
     "static/js/main.fc15ae6b.chunk.js"
   ]
 }
