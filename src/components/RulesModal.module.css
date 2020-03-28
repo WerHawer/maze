@@ -12,10 +12,12 @@
 }
 
 .controls {
+  margin: 0 auto;
   width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .controls button {

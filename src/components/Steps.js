@@ -4,25 +4,26 @@ import StepElement from "./StepElement";
 import css from "./Steps.module.css";
 import transition from "../transitions/arrowsTransition.module.css";
 
-const Steps = ({ steps, baseSquare }) => {
+const Steps = ({ steps, stepsAmount }) => {
   return (
-    <TransitionGroup
-      component="ul"
-      className={css.steps}
-      style={{ width: `${baseSquare}px` }}
+    <div
       id="steps"
+      style={{ height: `${(50 * stepsAmount.value) / 5 + 20}px` }}
+      className={css.stepsContainer}
     >
-      {steps.map(step => (
-        <CSSTransition
-          key={step.id}
-          timeout={250}
-          classNames={transition}
-          unmountOnExit
-        >
-          <StepElement step={step.arrow} />
-        </CSSTransition>
-      ))}
-    </TransitionGroup>
+      <TransitionGroup component="ul" className={css.steps}>
+        {steps.map(step => (
+          <CSSTransition
+            key={step.id}
+            timeout={250}
+            classNames={transition}
+            unmountOnExit
+          >
+            <StepElement step={step.arrow} />
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
+    </div>
   );
 };
 

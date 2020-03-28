@@ -11,13 +11,14 @@ import Options from "./components/Options";
 export default class App extends Component {
   state = {
     modalIsOpen: true,
-    baseSquare: 500,
+    baseSquare: 300,
     maze: [],
     size: { value: 3, label: "3" },
     start: {},
     finish: {},
     mazeLetters: [],
     steps: [],
+    stepsAmount: { value: 10, label: "10" },
     gameStage: 1,
     isWin: false,
     basicSpeed: { value: 750, label: "normal" }
@@ -76,13 +77,13 @@ export default class App extends Component {
   };
 
   mazeSteps = () => {
-    const { start, basicSpeed } = this.state;
+    const { start, basicSpeed, stepsAmount } = this.state;
 
     let actualCoords = { ...start };
     let tempSteps = [];
     let counter = 0;
 
-    for (let i = 0; i < 10; i += 1) {
+    for (let i = 0; i < stepsAmount.value; i += 1) {
       let actualSteps = [...stepsVariants];
 
       actualSteps = this.doActualStepsVariant(actualSteps, actualCoords);
@@ -97,14 +98,14 @@ export default class App extends Component {
 
     const interval = setInterval(() => {
       counter += 1;
-      counter > 10
+      counter > stepsAmount.value
         ? clearInterval(interval)
         : this.setState({ steps: tempSteps.slice(0, counter) });
     }, basicSpeed.value);
 
     setTimeout(() => {
       this.setState({ steps: [], gameStage: 3 });
-    }, basicSpeed.value * 10 + basicSpeed.value * 2);
+    }, basicSpeed.value * stepsAmount.value + basicSpeed.value * 2);
   };
 
   doActualStepsVariant = (actualSteps, actualCoords) => {
@@ -179,8 +180,12 @@ export default class App extends Component {
 
   onStartClick = () => {
     const { gameStage } = this.state;
+
+    if (gameStage === 2) return;
+
     const steps = document.querySelector("#steps");
     steps.scrollIntoView({ block: "end", behavior: "smooth" });
+
     this.setState({ gameStage: 2, isWin: false });
     this.mazeSteps();
 
@@ -210,12 +215,8 @@ export default class App extends Component {
     localStorage.save("alwaisShowModal", "off");
   };
 
-  handelSizeOChange = e => {
-    this.setState({ size: e });
-  };
-
-  handleSpeedChange = e => {
-    this.setState({ basicSpeed: e });
+  handelChange = e => {
+    this.setState({ [e.name]: e });
   };
 
   render() {
@@ -229,7 +230,8 @@ export default class App extends Component {
       modalIsOpen,
       gameStage,
       isWin,
-      basicSpeed
+      basicSpeed,
+      stepsAmount
     } = this.state;
 
     return (
@@ -243,10 +245,10 @@ export default class App extends Component {
 
         <div className="wrapper">
           <Options
-            onSizeChange={this.handelSizeOChange}
-            onSpeedChange={this.handleSpeedChange}
+            onChange={this.handelChange}
             sizeValue={size}
             speedValue={basicSpeed}
+            stepValue={stepsAmount}
           />
 
           <Square
@@ -260,7 +262,7 @@ export default class App extends Component {
             gameStage={gameStage}
             isWin={isWin}
           />
-          <Steps steps={steps} baseSquare={baseSquare} />
+          <Steps steps={steps} stepsAmount={stepsAmount} />
         </div>
       </>
     );
