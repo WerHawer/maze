@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/maze/static/css/main.b430f347.chunk.css",
-    "main.js": "/maze/static/js/main.fc15ae6b.chunk.js",
-    "main.js.map": "/maze/static/js/main.fc15ae6b.chunk.js.map",
+    "main.js": "/maze/static/js/main.e3d9d56f.chunk.js",
+    "main.js.map": "/maze/static/js/main.e3d9d56f.chunk.js.map",
     "runtime-main.js": "/maze/static/js/runtime-main.8b78a93f.js",
     "runtime-main.js.map": "/maze/static/js/runtime-main.8b78a93f.js.map",
     "static/js/2.222b066a.chunk.js": "/maze/static/js/2.222b066a.chunk.js",
     "static/js/2.222b066a.chunk.js.map": "/maze/static/js/2.222b066a.chunk.js.map",
     "index.html": "/maze/index.html",
-    "precache-manifest.2835cb82b863ac2e4d32067ec68c2cc0.js": "/maze/precache-manifest.2835cb82b863ac2e4d32067ec68c2cc0.js",
+    "precache-manifest.2365354843ac578f316ce88c42b6f453.js": "/maze/precache-manifest.2365354843ac578f316ce88c42b6f453.js",
     "service-worker.js": "/maze/service-worker.js",
     "static/css/main.b430f347.chunk.css.map": "/maze/static/css/main.b430f347.chunk.css.map",
     "static/js/2.222b066a.chunk.js.LICENSE.txt": "/maze/static/js/2.222b066a.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.8b78a93f.js",
     "static/js/2.222b066a.chunk.js",
     "static/css/main.b430f347.chunk.css",
-    "static/js/main.fc15ae6b.chunk.js"
+    "static/js/main.e3d9d56f.chunk.js"
   ]
 }
