@@ -1,0 +1,14 @@
+.element {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 2px;
+}
+.element:last-child {
+  margin-right: none;
+}
+
+.element img {
+  width: 100%;
+  height: auto;
+}

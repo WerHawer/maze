@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.selector {
+  width: 100px;
+}

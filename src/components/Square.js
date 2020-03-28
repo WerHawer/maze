@@ -1,27 +1,50 @@
 import React from "react";
 import SquareEelement from "./SquareEelement";
-import initInfo from "../data/initialFile";
 import css from "./Square.module.css";
 
-const square = ({ size }) => (
-  <div className={css.square}>
-    {initInfo.map((letter, index) => {
-      if (index >= size) return;
+const square = ({
+  maze,
+  size,
+  start,
+  finish,
+  onSquareClick,
+  onStartClick,
+  baseSquare,
+  gameStage,
+  isWin
+}) => (
+  <>
+    <button type="button" onClick={onStartClick} className={css.button}>
+      {gameStage < 4 ? "Start" : "New Game"}
+    </button>
 
-      let markup = [];
-      for (let i = 0; i < size; i += 1) {
-        markup = [
-          ...markup,
-          <SquareEelement
-            text={`${letter}${i + 1}`}
-            key={`${letter}${i + 1}`}
-          />
-        ];
-      }
-
-      return markup;
-    })}
-  </div>
+    <div
+      className={css.square}
+      style={{ width: `${baseSquare}px`, height: `${baseSquare}px` }}
+      id="feald"
+    >
+      {gameStage < 3 || gameStage === 4 ? (
+        <div
+          className={css.cover}
+          style={{ width: `${baseSquare}px`, height: `${baseSquare}px` }}
+        ></div>
+      ) : null}
+      {maze.map(({ x, y }) => (
+        <SquareEelement
+          key={x + y}
+          x={x}
+          y={y}
+          start={start}
+          finish={finish}
+          onClick={onSquareClick}
+          baseSquare={baseSquare}
+          size={size}
+          gameStage={gameStage}
+          isWin={isWin}
+        />
+      ))}
+    </div>
+  </>
 );
 
 export default square;

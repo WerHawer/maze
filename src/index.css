@@ -8,7 +8,40 @@ body {
 }
 
 .wrapper {
-  width: 50%;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lose,
+.win {
+  background-size: 40% 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: scale 300ms linear;
+}
+
+.win {
+  background-image: url("./img/win.png");
+  animation-delay: 300ms;
+}
+
+.lose {
+  background-image: url("./img/lose.png");
+  animation-delay: 30ms;
+}
+
+@keyframes scale {
+  0% {
+    background-size: 40%;
+  }
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 40%;
+  }
 }

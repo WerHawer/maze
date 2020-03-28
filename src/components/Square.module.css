@@ -1,7 +1,29 @@
 .square {
-  width: 150px;
-  height: 150px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.cover {
+  position: absolute;
+  cursor: not-allowed;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  background-color: rgb(149, 243, 140);
+  width: 100px;
+  min-height: 30px;
+  border: rgb(105, 175, 98);
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.button:hover {
+  background-color: rgb(140, 228, 243);
 }
