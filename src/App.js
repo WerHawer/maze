@@ -179,6 +179,8 @@ export default class App extends Component {
 
   onStartClick = () => {
     const { gameStage } = this.state;
+    const steps = document.querySelector("#steps");
+    steps.scrollIntoView({ block: "end", behavior: "smooth" });
     this.setState({ gameStage: 2, isWin: false });
     this.mazeSteps();
 

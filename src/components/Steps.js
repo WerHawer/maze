@@ -10,6 +10,7 @@ const Steps = ({ steps, baseSquare }) => {
       component="ul"
       className={css.steps}
       style={{ width: `${baseSquare}px` }}
+      id="steps"
     >
       {steps.map(step => (
         <CSSTransition
